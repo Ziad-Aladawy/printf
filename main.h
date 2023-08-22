@@ -14,6 +14,10 @@
 /* master function */
 int _printf(const char *format, ...);
 
+/* _puts */
+int _puts(char *s);
+int _putchar(int c);
+
 /* based on specifier */
 int print_char(va_list list, params_t *p);
 int print_string(va_list list, params_t *p);
@@ -30,11 +34,30 @@ int print_HEX(va_list list, params_t *p);
 /* no title */
 int print_pointer(va_list list, params_t *p);
 int print_unsigned(va_list list, params_t *p);
+char *convert(long int num, int base, int flag, params_t *params);
 
 /* manipulated */
 int print_rev(va_list list, params_t *p);
 int print_rot13(va_list list, params_t *p);
+int print_to(char *start, char *stop, char *except);
 
+
+/* get */
+int (*get_specifier(char *s))(va_list list, params_t *params);
+int get_modifier(char *s, params_t *params);
+char *get_width(char*s, params_t *params, va_list list);
+int get_flag(char *s, params_t *params);
+char *get_precision(char *p, params_t *params, va_list list);
+int get_print_func(char *s, va_list list, params_t *params);
+
+
+/* may need them */
+int _strlen(char *s);
+int _isdigit(int c);
+int print_number(char *s, params_t *params);
+int print_number_right_shift(char *s, params_t *params);
+int print_number_left_shift(char *s, params_t *params);
+void init_params(params_t *params, va_list list);
 
 /* parameters */
 
