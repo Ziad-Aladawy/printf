@@ -82,7 +82,8 @@ typedef struct parameters
 	unsigned int zero : 1;
 	unsigned int width : 1;
 	unsigned int precision : 1;
-
+	unsigned int h_modifier : 1;
+	unsigned int l_modifier : 1;
 }params_t;
 
 /* specifiers format */
