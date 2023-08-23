@@ -29,17 +29,17 @@
 */
 typedef struct parameters
 {
-        unsigned int unsign : 1;
-        unsigned int plus : 1;
-        unsigned int minus : 1;
-        unsigned int space : 1;
-        unsigned int hashtag : 1;
-        unsigned int zero : 1;
-        unsigned int width : 1;
-        unsigned int precision : 1;
-        unsigned int h_modifier : 1;
-        unsigned int l_modifier : 1;
-}params_t;
+	unsigned int unsign : 1;
+	unsigned int plus : 1;
+	unsigned int minus : 1;
+	unsigned int space : 1;
+	unsigned int hashtag : 1;
+	unsigned int zero : 1;
+	unsigned int width : 1;
+	unsigned int precision : 1;
+	unsigned int h_modifier : 1;
+	unsigned int l_modifier : 1;
+} params_t;
 
 /* specifiers format */
 typedef struct format
@@ -84,7 +84,7 @@ int print_from_to(char *start, char *stop, char *except);
 /* specifier.c */
 int (*get_specifier(char *s))(va_list list, params_t *params);
 int get_modifier(char *s, params_t *params);
-char *get_width(char*s, params_t *params, va_list list);
+char *get_width(char *s, params_t *params, va_list list);
 int get_flag(char *s, params_t *params);
 int get_print_func(char *s, va_list list, params_t *params);
 
