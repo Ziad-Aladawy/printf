@@ -10,7 +10,8 @@
 
 /* before parameters */
 #define PARAMS {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-
+#define CONVERT_LOWERCASE 1
+#define CONVERT_UNSIGNED 2
 
 /* parameters */
 
@@ -69,8 +70,8 @@ int print_hex(va_list list, params_t *p);
 int print_HEX(va_list list, params_t *p);
 
 /* number.c */
-int print_pointer(va_list list, params_t *p);
-int print_unsigned(va_list list, params_t *p);
+int print_pointer(va_list list, params_t *params);
+int print_unsigned(va_list list, params_t *params);
 char *convert(long int num, int base, int flag, params_t *params);
 
 /* manipulated.c */

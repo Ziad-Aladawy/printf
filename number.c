@@ -35,4 +35,40 @@ char *convert(long int num, int base, int flag, params_t *params)
 }
 
 /**
- * */
+ * print_unsigned - print unsigned numbers
+ * @list: argument pointer
+ * @params: parameter struct
+ * Return: sum
+*/
+int print_unsigned(va_list list, params_t *params)
+{
+	unsigned long l;
+
+	if (params->l_modifier)
+		l = (unsigned long)va_arg(list, unsigned long);
+	else if (params->h_modifier)
+		l = (unsigned short int)va_arg(list, unsigned int);
+	else
+		l = (unsigned int)va_arg(list, unsigned int);
+	params->unsign = 1;
+	return (print_number(convert(l, 10, COVERT_UNSIGNED, params), params));
+}
+
+/**
+ * print_pointer - print address
+ * @list: pointer
+ * @params: parameter struct
+ * Return: sum
+*/
+int print_pointer(va_list list, params_t *params)
+{
+	unsigned long int n = va_arg(list, unsigned long int);
+	char *str;
+
+	if (!n)
+		return (_puts("(nil)"));
+	str = convert(n, 16, CONVERT_UNSIGNED | CONVERT_LOWERCASE, params);
+	*--str = 'x';
+	*--str = '0';
+	return (print_number(str, params));
+}
