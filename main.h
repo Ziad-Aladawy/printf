@@ -12,6 +12,7 @@
 #define PARAMS {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 #define CONVERT_LOWERCASE 1
 #define CONVERT_UNSIGNED 2
+#define NULL_STRING "(null)"
 
 /* parameters */
 

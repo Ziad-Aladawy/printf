@@ -69,19 +69,19 @@ int get_flag(char *s, params_t *params)
 	switch (*s)
 	{
 		case '+':
-			x = params->plus_flag = 1;
+			x = params->plus = 1;
 			break;
 		case ' ':
-			x = params->space_flag = 1;
+			x = params->space = 1;
 			break;
 		case '#':
-			x = params->hashtag_flag = 1;
+			x = params->hashtag = 1;
 			break;
 		case '-':
-			x = params->minus_flag = 1;
+			x = params->minus = 1;
 			break;
 		case '0':
-			x = params->zero_flag = 1;
+			x = params->zero = 1;
 			break;
 	}
 	return (x);

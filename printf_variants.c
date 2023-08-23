@@ -12,7 +12,7 @@ int print_char(va_list list, params_t *p)
 	char pad_char = ' ';
 	unsigned int pad = 1, sum = 0, ch = va_arg(list, int);
 
-	if (p->minus_flag)
+	if (p->minus)
 		sum += _putchar(ch);
 	while (pad++ < p->width)
 		sum += _putchar(pad_char);
@@ -62,7 +62,7 @@ int print_string(va_list list, params_t *p)
 	if (p->precision < pad)
 		x = pad = p->precision;
 
-	if (p->minus_flag)
+	if (p->minus)
 	{
 		if (p->precision != UINT_MAX)
 			for (y = 0; y < pad; y++)
@@ -72,7 +72,7 @@ int print_string(va_list list, params_t *p)
 	}
 	while (x++ < p->width)
 		sum += _putchar(pad_char);
-	if (!p->minus_flag)
+	if (!p->minus)
 	{
 		if (p->precision != UINT_MAX)
 			for (y = 0; y < pad; y++)
