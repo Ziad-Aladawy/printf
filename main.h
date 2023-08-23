@@ -11,6 +11,43 @@
 /* before parameters */
 #define PARAMS {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 
+
+/* parameters */
+
+/**
+ * struct parameters - to handle the parameters before specifier
+ * @unsign: flag for unsigned value
+ * @plus: plus flag
+ * @minus: minus flag
+ * @space: space flag
+ * @hashtag: hashtag flag
+ * @zero: zero flag
+ * @width: field width
+ * @precision: field precision
+*/
+typedef struct parameters
+{
+        unsigned int unsign : 1;
+        unsigned int plus : 1;
+        unsigned int minus : 1;
+        unsigned int space : 1;
+        unsigned int hashtag : 1;
+        unsigned int zero : 1;
+        unsigned int width : 1;
+        unsigned int precision : 1;
+        unsigned int h_modifier : 1;
+        unsigned int l_modifier : 1;
+}params_t;
+
+/* specifiers format */
+typedef struct format
+{
+        char *type;
+        int (*f)(va_list, params_t *);
+} format;
+
+
+
 /* master function */
 int _printf(const char *format, ...);
 
@@ -63,6 +100,7 @@ char *get_precision(char *p, params_t *params, va_list list);
 /* params.c */
 void init_params(params_t *params, va_list list);
 
+<<<<<<< Updated upstream
 /* parameters */
 
 /**
@@ -97,4 +135,6 @@ typedef struct format
 	int (*f)(va_list, params_t *);
 } format;
 
+=======
+>>>>>>> Stashed changes
 #endif
