@@ -43,7 +43,11 @@ typedef struct parameters
 	unsigned int l_modifier : 1;
 } params_t;
 
-/* specifiers format */
+/**
+ * struct format - format
+ * @type: type
+ * @f: func
+*/
 typedef struct format
 {
 	char *type;
