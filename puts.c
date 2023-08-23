@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _puts: print string
+ * _puts - print string
  * @s: string
  * Return: len
 */
@@ -15,7 +15,7 @@ int _puts(char *s)
 }
 
 /**
- * _putchar: print char
+ * _putchar - print char
  * @c: char
  * Return: 1 success, -1 error
 */
