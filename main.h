@@ -44,8 +44,8 @@ typedef struct parameters
 /* specifiers format */
 typedef struct format
 {
-        char *type;
-        int (*f)(va_list, params_t *);
+	char *type;
+	int (*f)(va_list, params_t *);
 } format;
 
 
