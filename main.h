@@ -37,8 +37,8 @@ int print_unsigned(va_list list, params_t *p);
 char *convert(long int num, int base, int flag, params_t *params);
 
 /* manipulated.c */
-int print_rev(va_list list, params_t *p);
-int print_rot13(va_list list, params_t *p);
+int print_rev(va_list list, params_t *params);
+int print_rot13(va_list list, params_t *params);
 int print_from_to(char *start, char *stop, char *except);
 
 

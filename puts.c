@@ -11,7 +11,7 @@ int _puts(char *s)
 
 	while (*s)
 		_putchar(*str++);
-	return (str - a);
+	return (s - a);
 }
 
 /**
