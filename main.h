@@ -76,7 +76,7 @@ void init_params(params_t *params, va_list list);
  * @width: field width
  * @precision: field precision
 */
-typedef struct parameters
+typedef struct paramaters
 {
 	unsigned int unsign : 1;
 	unsigned int plus : 1;
