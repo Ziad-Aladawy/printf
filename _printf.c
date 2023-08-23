@@ -33,11 +33,11 @@ int _printf(const char *format, ...)
 		while (get_flag(p, &params))
 			p++;
 		p = get_width(p, &params, list);
-		p = get_percision(p, &params, list);
+		p = get_precision(p, &params, list);
 		if (get_modifier(p, &params))
 			p++;
 		if (!get_specifier(p))
-			size += print_to(start, p, params.l_modifier ||
+			size += print_from_to(start, p, params.l_modifier ||
 					params.h_modifier ? p - 1 : 0);
 		else
 			size += get_print_func(p, list, &params);

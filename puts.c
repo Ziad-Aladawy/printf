@@ -10,7 +10,7 @@ int _puts(char *s)
 	char *a = s;
 
 	while (*s)
-		_putchar(*str++);
+		_putchar(*s++);
 	return (s - a);
 }
 
@@ -33,6 +33,6 @@ int _putchar(int c)
 	if (c != -1)
 		buffer[i++] = c;
 
-	return (1)
+	return (1);
 }
 
