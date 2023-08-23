@@ -8,7 +8,7 @@
  */
 int (*get_specifier(char *s))(va_list list, params_t *params)
 {
-	specifier_t specifiers[] = {
+	format  specifiers[] = {
 		{"c", print_char},
 		{"d", print_int},
 		{"i", print_int},
@@ -27,9 +27,9 @@ int (*get_specifier(char *s))(va_list list, params_t *params)
 	};
 	int x = 0;
 
-	while (specifiers[x].specifier)
+	while (specifiers[x].type)
 	{
-		if (*s == specifiers[x].specifier[0])
+		if (*s == specifiers[x].type[0])
 		{
 			return (specifiers[x].f);
 		}
